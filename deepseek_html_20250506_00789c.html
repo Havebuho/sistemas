@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Redes Interactivo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Simulador de Redes Interactivo</h1>
+        </header>
+        
+        <div class="main-content">
+            <!-- Panel de dispositivos -->
+            <div class="devices-panel">
+                <h2>Dispositivos</h2>
+                <div class="device-list">
+                    <div class="device-item" data-type="router" draggable="true">
+                        <img src="img/router.png" alt="Router">
+                        <span>Router</span>
+                    </div>
+                    <div class="device-item" data-type="switch" draggable="true">
+                        <img src="img/switch.png" alt="Switch">
+                        <span>Switch</span>
+                    </div>
+                    <div class="device-item" data-type="pc" draggable="true">
+                        <img src="img/pc.png" alt="PC">
+                        <span>PC</span>
+                    </div>
+                    <div class="device-item" data-type="server" draggable="true">
+                        <img src="img/server.png" alt="Servidor">
+                        <span>Servidor</span>
+                    </div>
+                    <div class="device-item" data-type="firewall" draggable="true">
+                        <img src="img/firewall.png" alt="Firewall">
+                        <span>Firewall</span>
+                    </div>
+                </div>
+                
+                <button id="clear-btn">Limpiar Todo</button>
+            </div>
+            
+            <!-- Área de trabajo -->
+            <div class="workspace" id="workspace">
+                <h2>Área de Trabajo</h2>
+                <div class="canvas" id="canvas"></div>
+            </div>
+            
+            <!-- Panel de información -->
+            <div class="info-panel">
+                <h2>Información</h2>
+                <div class="instructions">
+                    <h3>Instrucciones:</h3>
+                    <ol>
+                        <li>Arrastra dispositivos al área de trabajo</li>
+                        <li>Haz doble clic en un dispositivo para seleccionarlo como origen</li>
+                        <li>Clica en otro dispositivo para conectar</li>
+                        <li>Arrastra dispositivos para reposicionarlos</li>
+                        <li>Clica en un dispositivo y presiona 'Supr' para eliminarlo</li>
+                    </ol>
+                </div>
+                
+                <div class="device-info">
+                    <h3>Descripción del Dispositivo</h3>
+                    <p id="device-description">Selecciona un dispositivo para ver su descripción.</p>
+                </div>
+                
+                <div class="connection-feedback">
+                    <h3>Retroalimentación</h3>
+                    <p id="feedback-message">Realiza conexiones para ver la retroalimentación.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
